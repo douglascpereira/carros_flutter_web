@@ -1,5 +1,6 @@
 import 'package:carros_flutter_web/app_model.dart';
-import 'package:carros_flutter_web/pages/carros_pages.dart';
+import 'package:carros_flutter_web/colors.dart';
+import 'package:carros_flutter_web/pages/carros/carros_pages.dart';
 import 'package:carros_flutter_web/pages/default_pages.dart';
 import 'package:carros_flutter_web/pages/usuarios_pages.dart';
 import 'package:flutter/material.dart';
@@ -53,7 +54,7 @@ class _MenuState extends State<Menu> {
       child: InkWell(
         onTap: (){
           AppModel app = Provider.of<AppModel>(context, listen: false);
-          app.setPage(item.page);
+          app.push(PageInfo(item.title, item.page), replace: true);
 
           setState(() {
             menus.forEach((item) => item.selected = false);
@@ -62,7 +63,7 @@ class _MenuState extends State<Menu> {
           });
         },
         child: ListTile(
-          leading: Icon(item.icon),
+          leading: Icon(item.icon, color: AppColors.blue,),
           title: Text(item.title, style: TextStyle(fontWeight: item.selected ? FontWeight.bold : FontWeight.normal
           ),),
         ),

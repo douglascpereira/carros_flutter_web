@@ -8,6 +8,8 @@ class Body extends StatelessWidget {
 
     AppModel app = Provider.of<AppModel>(context);
 
-    return app.page;
+    PageInfo info = app.pages.last;
+
+    return info.page;
   }
 }
