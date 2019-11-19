@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
 
   ThemeData _theme() {
     return ThemeData(
+      fontFamily: "Raleway",
       primaryColor: AppColors.blue,
       scaffoldBackgroundColor: Colors.white,
       splashColor: Colors.blue,
