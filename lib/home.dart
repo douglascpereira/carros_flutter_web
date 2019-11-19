@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   Size get size => MediaQuery.of(context).size;
 
-  bool get showMenu => size.width > 500;
+  bool get showMenu => true; //size.width > 500;
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +62,8 @@ class _HomePageState extends State<HomePage> {
   _right() {
 
     return Container(
+      color: Colors.yellow,
+      padding: EdgeInsets.all(16),
       width: showMenu ? size.width - menuWidth : size.width,
       child: Body(),
     );
