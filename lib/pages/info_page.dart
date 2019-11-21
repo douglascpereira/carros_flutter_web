@@ -1,3 +1,4 @@
+import 'package:carros_flutter_web/web/web.dart';
 import 'package:flutter/material.dart';
 
 class InfoPage extends StatefulWidget {
@@ -18,7 +19,11 @@ class _InfoPageState extends State<InfoPage> {
       padding: EdgeInsets.all(16),
       child: ListView(
         children: <Widget>[
-          _font()
+          _font(),
+          SizedBox(
+            height: 20,
+          ),
+          _userAgent()
         ],
       ),
     );
@@ -39,6 +44,17 @@ class _InfoPageState extends State<InfoPage> {
           Text("Raleway: Flutter Web", style: TextStyle(fontFamily: "Raleway"),),
           SizedBox(height: 10,),
         ],
+      ),
+    );
+  }
+
+  _userAgent() {
+    return Card(
+      child: Container(
+        padding: EdgeInsets.all(20),
+        child: Center(
+          child: Text("User Agent: [${userAgent()}]"),
+        ),
       ),
     );
   }

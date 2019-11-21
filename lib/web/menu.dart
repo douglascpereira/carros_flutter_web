@@ -1,4 +1,5 @@
 
+import 'package:carros_flutter_web/charts/chart_page.dart';
 import 'package:carros_flutter_web/pages/carros/carros_pages.dart';
 import 'package:carros_flutter_web/pages/count_page.dart';
 import 'package:carros_flutter_web/pages/default_pages.dart';
@@ -39,6 +40,7 @@ class _MenuState extends State<Menu> {
     menus.add(ItemMenu("Usuários", FontAwesomeIcons.user, UsuariosPage()));
     menus.add(ItemMenu("Upload", FontAwesomeIcons.upload, UploadPage()));
     menus.add(ItemMenu("Storage", FontAwesomeIcons.database, CountPage()));
+    menus.add(ItemMenu("Chart", FontAwesomeIcons.chartArea, ChartsPage()));
     menus.add(ItemMenu("Info", FontAwesomeIcons.info, InfoPage()));
   }
 
